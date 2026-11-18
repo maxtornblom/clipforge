@@ -1,0 +1,109 @@
+/* ClipForge: dark, Medal-inspired. */
+
+:root {
+  --accent-bg-color: #f5c518;
+  --accent-color: #f5c518;
+  --accent-fg-color: #17130a;
+  --window-bg-color: #0d0d11;
+  --view-bg-color: #0d0d11;
+  --headerbar-bg-color: #0d0d11;
+  --headerbar-backdrop-color: #0d0d11;
+  --headerbar-shade-color: transparent;
+  --card-bg-color: #17171e;
+}
+
+window.background { background-color: #0d0d11; }
+
+headerbar { box-shadow: none; border-bottom: 1px solid alpha(white, 0.05); }
+
+.brand {
+  font-weight: 800;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  color: #f5c518;
+  margin-left: 6px;
+}
+
+/* All / Favorites tabs */
+.tabs button { padding: 4px 18px; font-weight: 600; }
+.tabs button:checked { background: #f5c518; color: #17130a; }
+
+/* Library cards */
+flowboxchild { padding: 0; border-radius: 14px; outline-offset: 2px; }
+.clip-card {
+  background: #17171e;
+  border-radius: 14px;
+  border: 1px solid alpha(white, 0.06);
+  transition: background 150ms, border-color 150ms;
+}
+flowboxchild:hover .clip-card,
+flowboxchild:focus .clip-card {
+  background: #1e1e27;
+  border-color: alpha(#f5c518, 0.55);
+}
+.clip-thumb { background: #000; }
+
+.duration-badge {
+  background: alpha(black, 0.72);
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 6px;
+}
+
+.play-hint {
+  opacity: 0;
+  color: #17130a;
+  background: #f5c518;
+  border-radius: 999px;
+  padding: 16px;
+  transition: opacity 150ms;
+}
+flowboxchild:hover .play-hint { opacity: 1; }
+
+.card-action {
+  opacity: 0;
+  background: alpha(black, 0.6);
+  color: white;
+  min-width: 28px;
+  min-height: 28px;
+  padding: 0;
+  transition: opacity 150ms;
+}
+.card-action:hover { background: alpha(black, 0.85); }
+flowboxchild:hover .card-action,
+.card-action.on,
+.card-action:checked { opacity: 1; }
+.card-action.on { color: #f5c518; }
+
+/* Editor */
+.video-frame { background: #000; }
+.osd-badge {
+  background: alpha(black, 0.7);
+  color: white;
+  border-radius: 8px;
+  padding: 6px 12px;
+}
+.editor-controls { padding: 14px 20px 18px 20px; background: #0d0d11; }
+.timeline { border-radius: 8px; }
+
+button.pill { padding: 8px 22px; font-weight: 700; }
+
+.clip-now { color: #ff4d4d; }
+
+/* Screen-border flash (layer-shell overlay) */
+window.flash-window { background: transparent; }
+
+/* Menus: transparent popover shell (no box behind the rounded menu), clean rounded body */
+popover.background { background: transparent; box-shadow: none; }
+popover.menu > contents {
+  background: #1a1a22;
+  border-radius: 14px;
+  border: 1px solid alpha(white, 0.08);
+  padding: 6px;
+  box-shadow: 0 8px 24px alpha(black, 0.45);
+}
+popover.menu modelbutton { border-radius: 8px; min-height: 34px; padding: 0 12px; }
+popover.menu modelbutton:hover { background: alpha(#f5c518, 0.16); }
+popover.menu separator { margin: 4px 6px; background: alpha(white, 0.07); }

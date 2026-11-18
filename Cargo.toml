@@ -1,0 +1,19 @@
+[package]
+name = "clipforge"
+version = "2.0.0"
+edition = "2021"
+description = "Medal-style clip manager and trimmer for GPU Screen Recorder"
+license = "MIT"
+
+[dependencies]
+gtk = { package = "gtk4", version = "0.11", features = ["v4_12"] }
+adw = { package = "libadwaita", version = "0.9", features = ["v1_5"] }
+layer-shell = { package = "gtk4-layer-shell", version = "0.8" }
+gst = { package = "gstreamer", version = "0.25" }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+async-channel = "2"
+
+[profile.release]
+lto = "thin"
+opt-level = 3

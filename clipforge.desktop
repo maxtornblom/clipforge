@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=ClipForge
+Comment=Clip manager and trimmer for GPU Screen Recorder
+Exec=clipforge
+Icon=se.local.clipforge
+Terminal=false
+Categories=AudioVideo;Video;
+StartupWMClass=se.local.clipforge
